@@ -1,3 +1,8 @@
 module.exports = {
-  transpileDependencies: ["vuetify"]
+  transpileDependencies: ["vuetify"],
+
+  pwa: {
+    name: 'UmbraPlan',
+    themeColor: '#1661ab'
+  }
 };
