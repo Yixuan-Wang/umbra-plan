@@ -1,40 +1,50 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
   },
-  extends: ['eslint:recommended', 'plugin:vue/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:vue/recommended',
+  ],
   rules: {
-    'vue/max-attributes-per-line': [
-      'error',
-      {
-        singleline: 4,
-        multiline: {
-          max: 3,
-          allowFirstLine: false
-        }
-      }
-    ],
-    indent: [
+    'comma-dangle': ['warn', 'always-multiline'],
+    'curly': ['warn', 'multi-or-nest'],
+    'generator-star-spacing': ['warn', 'before'],
+    'indent': [
       'warn',
       2,
       {
         CallExpression: { arguments: 'first' },
-        ignoredNodes: [ 'TemplateLiteral' ]
-      }
+        VariableDeclarator: { 'var': 2, 'let': 2, 'const': 3 },
+        ignoredNodes: ['TemplateLiteral'],
+      },
     ],
-    'template-curly-spacing' : 'off',
-    'space-infix-ops': 'warn',
-    curly: ['warn', 'multi-or-nest'],
-    'space-before-blocks': 'warn',
-    'vue/script-indent': 'warn',
+    'keyword-spacing': ['warn', { 'before': true, 'after': true }],
+    'no-console': 'warn',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
     'no-multi-spaces': 'warn',
     'no-trailing-spaces': 'warn',
-    'generator-star-spacing': ['warn', 'before'],
-    'no-console': 'warn',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn'
+    'no-unused-vars': ['warn', { 'varsIgnorePattern': '^_' }],
+    'object-curly-spacing': ['warn', 'always'],
+    'quotes': ['warn', 'single'],
+    'semi': ['warn', 'always'],
+    'space-before-blocks': 'warn',
+    'space-infix-ops': 'warn',
+    'template-curly-spacing': 'warn',
+    'vue/max-attributes-per-line': [
+      'warn',
+      {
+        singleline: 4,
+        multiline: {
+          max: 3,
+          allowFirstLine: false,
+        },
+      },
+    ],
+    'vue/script-indent': 'warn',
   },
   parserOptions: {
-    parser: 'babel-eslint'
-  }
-}
+    parser: 'babel-eslint',
+  },
+};
