@@ -1,24 +1,7 @@
 # umbra-plan
 
-## Project setup
-```
-yarn install
-```
+**DEPRECATED**
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+A personal project as a practice of JavaScript and Vue. *Not suitable for any production purposes*.
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Originally created in May of 2015 as an AIR app written with ActionScript.
